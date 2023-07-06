@@ -98,7 +98,7 @@ def getRoutes(request):
 
 @api_view(["GET"])
 def getLinks(request):
-    links = Link.objects.all()
+    links = Link.objects.all().order_by("-created")
     serializer = LinkSerializer(links, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 

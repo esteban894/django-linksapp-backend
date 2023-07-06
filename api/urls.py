@@ -6,7 +6,7 @@ urlpatterns = [
     path("links/", views.getLinks, name="links"),
     path("links/<int:pk>/update/", views.updateLink, name="update-link"),
     path("links/create/", views.createLink, name="add-link"),
-    path("links/<int:pk>/delete/", views.deleteLink, name="add-link"),
+    path("links/<int:pk>/delete/", views.deleteLink, name="delete-link"),
     path("links/<int:pk>/", views.getLink, name="link"),
 
     path("users/", views.getUsers, name="users"),
